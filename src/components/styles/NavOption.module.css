@@ -1,0 +1,27 @@
+.navOption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 50px;
+    color: var(--dark-blue);
+}
+
+.navOption:hover {
+    cursor: pointer;
+    color: var(--neon-purple);
+    transition: color 100ms linear;  
+}
+
+.navOption:hover img{
+    filter: invert(55%) sepia(79%) saturate(6957%) hue-rotate(249deg) brightness(101%) contrast(106%); 
+}
+
+.navOption img{
+    height: 30px;
+    width: auto;
+    padding-right: 5px;
+}
+
+.navOption p {
+    font-weight: 700;
+}

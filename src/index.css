@@ -1,3 +1,12 @@
+:root {
+  --dark: #090935;
+  --dark-blue: #0D47A1;
+  --light-blue: #06A8BF;
+  --neon-purple: #9747FF;
+  --mate-purple: #504A93;
+  --pink: #B681AA;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,7 +22,7 @@ code {
 }
 
 .app {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

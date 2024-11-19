@@ -1,0 +1,13 @@
+.aboutUs {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+.aboutUs h2 {
+    font-size: 32px;
+}
+
+.aboutUs p {
+    font-size: 18px;
+    line-height: 30px;
+}

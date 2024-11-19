@@ -1,0 +1,81 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    padding-block: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    position: sticky;
+    z-index: 1;
+}
+.header_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header_logo:hover {
+    cursor: pointer;
+}
+
+.header_logo img {
+    height: 50px;
+    width: auto;
+}
+
+.header_logo h1 {
+    margin: 0;
+}
+
+.header_navigator {
+    display: flex;
+    flex-direction: row;
+}
+
+.header_account {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+
+.signUpButton {
+    margin-right: 30px;
+    color: var(--dark-blue);
+    cursor: pointer
+}
+
+.signUpButton:hover {
+    transform: scale(1.05);
+}
+
+.loginButton {
+    display: flex;
+    flex-direction: row;
+    color: var(--dark-blue);
+    align-items: center;
+    border: 2px solid var(--dark-blue);
+    border-radius: 10px;
+    padding-inline: 30px;
+    cursor: pointer
+}
+
+.loginButton:hover {
+    color: white;
+    background-color: var(--dark-blue);
+    transition: background-color 200ms linear;
+    border: 2px solid white;
+}
+
+.loginButton:hover .loginIcon{
+    stroke: white;
+}
+
+
+.loginIcon {
+    stroke: var(--dark-blue);
+    stroke-width: 1px;
+    padding-left: 5px;
+}
+

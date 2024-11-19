@@ -1,102 +1,12 @@
-/*  Basic Styling -  Expand this significantly to match the design */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:#f4f4f4;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:white;
+
+} 
   
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .header-left h1 {
-      margin: 0;
-  }
-  .header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
-  .hero {
-    display: flex;
-    align-items: center;
-    min-height: 500px;
-    background-image: url('/images/city-background.jpg'); /* Replace with your hero image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-  }
-  
-  .hero-content {
-    flex: 1;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .hero-content h2 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-  }
-  
-  
-  /* Style other sections similarly */
-  section {
-    padding: 40px;
-  }
-  .about-us {
-    background-color:#294391;
-    color:white;
-  }
-  .services {
-    background-color:#fff;
-  }
-  .service-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-  }
-  .contact-us {
-      background-color:#294391;
-      color:white;
-      
-  }
-  .contact-us form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-  }
-  
-  .contact-us input,
-  .contact-us textarea{
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-  }
-  .contact-us button{
-      background-color:#00A79D;
-      color:white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-  }
-  .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
+/* Style other sections similarly */
+section {
+  padding: 40px;
+}

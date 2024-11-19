@@ -1,0 +1,6 @@
+ .footerContainer {
+    background-color: var(--dark-blue);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}

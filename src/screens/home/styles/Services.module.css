@@ -1,0 +1,22 @@
+.services {
+    background-color: white;
+}
+
+.services h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: var(--dark-blue);
+    font-weight: 800;
+}
+
+.serviceGrid {
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceGrid p {
+    font-size: 18px;
+    line-height: 30px;
+    white-space: pre-wrap;
+}

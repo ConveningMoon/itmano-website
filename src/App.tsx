@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import AboutUs from './components/AboutUs';
-import Services from './components/Services';
-import ContactUs from './components/ContactUs';
-import Footer from './components/Footer';
+import Header from './screens/home/Header';
+import HeroSection from './screens/home/HeroSection';
+import AboutUs from './screens/home/AboutUs';
+import Services from './screens/home/Services';
+import ContactUs from './screens/home/ContactUs';
+import Footer from './screens/home/Footer';
 import './styles.css';
 
 const App: React.FC = () => (

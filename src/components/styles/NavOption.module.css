@@ -8,12 +8,12 @@
 
 .navOption:hover {
     cursor: pointer;
-    color: var(--neon-purple);
+    color: var(--light-blue);
     transition: color 100ms linear;  
 }
 
 .navOption:hover img{
-    filter: invert(55%) sepia(79%) saturate(6957%) hue-rotate(249deg) brightness(101%) contrast(106%); 
+    filter: invert(46%) sepia(28%) saturate(1931%) hue-rotate(145deg) brightness(103%) contrast(95%);
 }
 
 .navOption img{

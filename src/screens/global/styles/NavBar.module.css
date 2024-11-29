@@ -1,0 +1,125 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    padding-block: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(13, 71, 161, 0.2);
+    top: 0;
+    position: sticky;
+    z-index: 1;
+}
+
+/* HeaderLogo Decorations */
+.homeLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;    
+}
+
+.homeLogo:hover {
+    cursor: pointer;
+}
+
+.homeLogo img {
+    height: 50px;
+    width: auto;
+}
+
+.homeLogo span {
+    color: var(--light-blue);
+}
+
+.homeLogo h1 {
+    margin: 0;
+    color: var(--dark-blue);
+}
+
+.header_navigator {
+    display: flex;
+    flex-direction: row;
+}
+
+.header_account {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 700;
+}
+
+/* SignUp Decorations */
+.signUpButton_active {
+    margin-right: 30px;
+    color: var(--light-blue);
+    text-decoration: none;
+    cursor: pointer
+}
+
+.signUpButton_active:hover {
+    transform: scale(1.05);
+}
+
+.signUpButton_desactive {
+    margin-right: 30px;
+    color: var(--dark-blue);
+    text-decoration: none;
+    cursor: pointer
+}
+
+.signUpButton_desactive:hover {
+    color: var(--dark-blue);
+    transform: scale(1.1);
+}
+
+/* LogIn Decorations */
+.loginButton_desactive {
+    display: flex;
+    flex-direction: row;
+    color: var(--dark-blue);
+    align-items: center;
+    border: 2px solid var(--dark-blue);
+    border-radius: 10px;
+    padding-inline: 30px;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.loginButton_desactive:hover {
+    color: white;
+    background-color: var(--dark-blue);
+    transition: background-color 200ms linear;
+    border: 2px solid white;
+}
+
+
+.loginButton_desactive:hover .loginIcon{
+    stroke: white;
+}
+
+
+.loginButton_desactive .loginIcon {
+    stroke: var(--dark-blue);
+    stroke-width: 1px;
+    padding-left: 5px;
+}
+
+.loginButton_active {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-inline: 30px;
+    text-decoration: none;
+    background-color: var(--light-blue);
+    cursor: pointer
+}
+
+.loginButton_active .loginIcon {
+    stroke: white;
+    stroke-width: 1px;
+    padding-left: 5px;
+}

@@ -3,7 +3,7 @@ import styles from './styles/Footer.module.css';
 
 const Footer: React.FC = () => (
   <footer className={styles.footerContainer}>
-    <p>&copy; 2024 ITMANO. All rights reserved.</p>
+    <p className={styles.footerText}>&copy; 2024 ITMANO. All rights reserved.</p>
   </footer>
 );
 

@@ -3,4 +3,10 @@
     color: #fff;
     text-align: center;
     font-size: 12px;
+    margin-top: 0;
+}
+
+.footerText {
+    margin: 0;
+    padding-block: 10px;
 }

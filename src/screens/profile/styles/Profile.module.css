@@ -1,0 +1,38 @@
+.ProfileContentContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.ProfileContentContainer .profileMediaContainer {
+    background-color: aqua;
+}
+
+.ProfileContentContainer .bannerImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.ProfileContentContainer .profileImage {
+    position: absolute;
+    left: 0;
+    height: auto;
+    width: 300px;
+    border-radius: 50%;
+    border: 8px solid white;
+    margin: 25px;
+}
+
+.ProfileContentContainer .personalInfo {
+    margin-inline: 25px;
+    margin-top: 90px;
+}
+
+.ProfileContentContainer .personalInfo h1{
+    color: var(--dark);
+}
+
+.ProfileContentContainer .personalInfo h2{
+   margin-top: 40px;
+}

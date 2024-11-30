@@ -42,6 +42,19 @@
     flex-direction: row;
 }
 
+.toNavOptionText {
+    color: var(--dark-blue);
+    font-weight: 700;
+    text-decoration: none;
+    padding-right: 100px;
+}
+
+.toProfileText {
+    color: var(--dark-blue);
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .header_account {
     display: flex;
     align-items: center;

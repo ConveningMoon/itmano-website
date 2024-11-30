@@ -1,0 +1,80 @@
+.CreateUserFormContainer {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 40px;
+    box-shadow: rgba(13, 71, 161, 0.5) 0px 30px 30px -20px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 50vw;
+    justify-self: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.CreateUserContainer .title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 32px;
+    background: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
+    color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.CreateUserContainer .subtitle {
+    font-size: 18px;
+    width: 90%;
+    text-align: center;
+}
+
+.CreateUserContainer .label {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 90%;
+}
+
+.CreateUserContainer .request {
+    font-size: 14px;
+   max-width: 90%;
+}
+
+.CreateUserForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.CreateUserFormButton {
+    width: 90%;
+    font-size: 15px;
+    background: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
+    color: white;
+    padding-block: 15px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    border-radius: 20px;
+    box-shadow: rgba(13, 71, 161, 0.4) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.CreateUserFormButton:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.goBackPressable {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 15px;
+    font-style: italic;
+    padding-left: 5px;
+    color: var(--dark);
+    cursor: pointer;
+}

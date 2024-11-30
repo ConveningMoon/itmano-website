@@ -1,7 +1,7 @@
 import React, { useState, FormEvent }  from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { addUser, isEmailTaken, generateUserId, authenticateUser } from '../services/userService';
+import { isEmailTaken, generateUserId, authenticateUser } from '../services/userService';
 import { User } from '../types/types';
 
 import styles from './styles/AccountCard.module.css';
@@ -22,7 +22,7 @@ const AccountCard: React.FC<AccountCardProps> = ({ isRegister}) => {
 
     const navigate = useNavigate();
 
-    async function sendSignInFormHandler(e: FormEvent) {
+    function sendSignInFormHandler(e: FormEvent) {
         e.preventDefault();
         setMessage(null);
         // Basic Validation
@@ -46,11 +46,10 @@ const AccountCard: React.FC<AccountCardProps> = ({ isRegister}) => {
             id: generateUserId(),
             email: emailInput.trim(),
             password: passwordInput, // MUST hash passwords!
-        };
-    
-        addUser(newUser);
-        setMessage({ type: 'success', text: 'Registration successful! You can now log in.' });
-        navigate('/login');
+        };    
+        
+        // setMessage({ type: 'success', text: 'Registration successful! You can now log in.' });
+        navigate('/create_user', {state: {newUser}});
 
         // Clear Form Fields
         setEmailInput('');
@@ -63,16 +62,17 @@ const AccountCard: React.FC<AccountCardProps> = ({ isRegister}) => {
         setMessage(null);
 
         if (!emailInput.trim() || !passwordInput) {
-          setMessage({ type: 'error', text: 'Both fields are required.' });
-          return;
+            setMessage({ type: 'error', text: 'Both fields are required.' });
+            return;
         }
     
         const user = authenticateUser(emailInput, passwordInput);
     
         if (user) {
-          setMessage({ type: 'success', text: `Welcome, ${user.email}! You have successfully logged in.` });
+        //   setMessage({ type: 'success', text: `Welcome, ${user.email}! You have successfully logged in.` });
+            navigate('/profile', {state: {user}});
         } else {
-          setMessage({ type: 'error', text: 'Invalid username or password. Please try again.' });
+            setMessage({ type: 'error', text: 'Invalid username or password. Please try again.' });
         }
     }
 
@@ -133,7 +133,7 @@ const AccountCard: React.FC<AccountCardProps> = ({ isRegister}) => {
             <input 
                 className={styles.AccountFormButton} 
                 type="submit" 
-                value={isRegister ? "Create new account" : "Log In"}
+                value={isRegister ? "SIGN UP" : "LOG IN"}
             />            
             {!isRegister && 
                 <p className={styles.notAccountText}>Don't have account? <span onClick={goToRegister}>Register</span></p>

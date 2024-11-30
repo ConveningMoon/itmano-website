@@ -28,7 +28,7 @@ const webDescription =
 </p>
 
 const Services: React.FC = () => (
-  <section className={styles.services}>
+  <section className={styles.services} id='services'>
     <h2>OUR SERVICES</h2>
     <div className={styles.serviceGrid}>
       <ServiceCard

@@ -1,18 +1,22 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+import './styles.css';
+
 import Home from './screens/home/Home';
 import SignUp from './screens/auth/SignUp';
 import LogIn from './screens/auth/LogIn';
-
-import './styles.css';
+import CreateUser from './screens/auth/CreateUser';
+import Profile from './screens/profile/Profile';
 
 const App: React.FC = () => (
   <div className="app">
     <Routes>
       <Route path='/' element={<Home />}/>
       <Route path='/register' element={<SignUp />}/>
+      <Route path='/create_user' element={<CreateUser />}/>
       <Route path='/login' element={<LogIn />}/>
+      <Route path='/profile' element={<Profile />}/>
 
       <Route path="*" element={<NotFound />} />
     </Routes>

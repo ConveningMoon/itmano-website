@@ -1,4 +1,5 @@
 .aboutUs {
+    padding-block: 60px;
     background-color: var(--dark-blue);
     color: white;
 }

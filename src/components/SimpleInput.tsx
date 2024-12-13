@@ -21,6 +21,7 @@ const SimpleInput: React.FC<SimpleInputProps> = ({nameId, type = 'text', placeho
                 id={nameId}
                 value={value}
                 onChange={onChange} 
+                placeholder=''
             />
             <label className={styles.user_label}>{placeholder}</label>
         </div>

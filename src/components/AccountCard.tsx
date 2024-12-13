@@ -1,10 +1,11 @@
 import React, { useState, FormEvent }  from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import styles from './styles/AccountCard.module.css';
+
 import { isEmailTaken, generateUserId, authenticateUser } from '../services/userService';
 import { User } from '../types/types';
-
-import styles from './styles/AccountCard.module.css';
+import SimpleInput from './SimpleInput';
 
 interface AccountCardProps {
     isRegister: boolean;
@@ -96,33 +97,25 @@ const AccountCard: React.FC<AccountCardProps> = ({ isRegister}) => {
             </p>
         }        
         <form onSubmit={isRegister ? sendSignInFormHandler : sendLoginFormHandler} className={styles.AccountForm}>
-            <input 
-                required
-                className={styles.AccountInput} 
-                type="email" 
-                name="email" 
-                id="email" 
-                placeholder="E-mail"
+            <SimpleInput
+                nameId='email'
+                type='email'
+                placeholder='E-mail'
                 value={emailInput}
                 onChange={(e) => setEmailInput(e.target.value)}
             />
-            <input 
-                required={true} 
-                className={styles.AccountInput} 
-                type="password" 
-                name="password" 
-                id="password" 
-                placeholder="Password"
+            <SimpleInput
+                nameId='password'
+                type='password'
+                placeholder='Password'
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
             />
             {isRegister && 
-                <input required={true} 
-                    className={styles.AccountInput} 
-                    type="password" 
-                    name="repeat_password" 
-                    id="repeat_password" 
-                    placeholder="Repeat Password"
+                <SimpleInput
+                    nameId='repeatpassword'
+                    type='password'
+                    placeholder='Repeat Password'
                     value={repeatPasswordInput}
                     onChange={(e) => setRepeatPasswordInput(e.target.value)}
                 />

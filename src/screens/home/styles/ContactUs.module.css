@@ -112,5 +112,16 @@
 
 .contactUs img {
     padding-inline: 50px;
-    max-height: 500px;
+    max-width: 30%;
+    width: 30%;
+}
+
+@media (max-width: 860px) {
+    .formContainer form {
+        width: 100%;
+    }
+
+    .contactUs img {
+        display: none;
+    }
 }

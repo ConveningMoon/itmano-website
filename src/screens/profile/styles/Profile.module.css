@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+    position: relative;
 }
 
 .ProfileContentContainer .profileMediaContainer {
@@ -15,13 +16,14 @@
 }
 
 .ProfileContentContainer .profileImage {
-    position: absolute;
-    left: 0;
+    position: absolute; 
+    left: calc(50vw - 152px);
     height: auto;
-    width: 300px;
     border-radius: 50%;
-    border: 8px solid white;
-    margin: 25px;
+
+    /* to calculate the left and right */
+    width: 300px;
+    border: 4px solid white;
 }
 
 .ProfileContentContainer .personalInfo {

@@ -1,7 +1,8 @@
 .hero {
   display: flex;
   align-items: center;
-  min-height: 500px;
+  justify-content: center;
+  min-height: 40vw;
   background-image: url('../../../assets/images/city-background.jpg'); 
   background-size: cover;
   background-position: center;
@@ -9,18 +10,62 @@
 }
 
 .heroContainer {
-  flex: 1;
   text-align: center;
+  position: absolute;
 }
 
 .heroContainer h2 {
   padding-bottom: 10px;
-  font-size: 100px;
+  padding-inline: 20px;
+  font-size: 8vw;
   margin: 0;
 }
 
 .heroContainer p {
-  font-size: 50px;
+  padding-inline: 20px;
+  font-size: 4vw;
   margin: 0;
   font-weight: 600;
+}
+
+@media (min-width: 1250px) {
+  .hero {
+    min-height: 30vw;
+  }
+
+  .heroContainer h2 {
+    font-size: 100px;
+  }
+
+  .heroContainer p {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .heroContainer h2 {
+    font-size: 80px;
+  }
+
+  .heroContainer p {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 670px) {
+  .hero {
+    min-height: 220px;
+  }
+
+  .heroContainer h2 {
+    font-size: 40px;
+  }
+
+  .heroContainer p {
+    font-size: 20px;
+  }
 }

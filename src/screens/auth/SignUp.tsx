@@ -6,7 +6,7 @@ import AccountCard from '../../components/AccountCard';
 
 const SignUp: React.FC = () => (
     <div className={styles.SignUpContainer}>
-        <NavBar />
+        <NavBar isAuthenticating={true} />
         <AccountCard
             isRegister={true}
         />

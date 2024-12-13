@@ -1,4 +1,4 @@
-.header {
+.general_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,6 +9,16 @@
     top: 0;
     position: sticky;
     z-index: 1;
+}
+
+.small_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+    padding-top: 20px;
+    background-color: #fff;
+    top: 0;
 }
 
 /* HeaderLogo Decorations */
@@ -37,16 +47,29 @@
     color: var(--dark-blue);
 }
 
+.desktopNavContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header_navigator {
     display: flex;
     flex-direction: row;
+    text-align: center;
 }
 
 .toNavOptionText {
     color: var(--dark-blue);
     font-weight: 700;
     text-decoration: none;
-    padding-right: 100px;
+    margin-right: 100px;
+}
+
+.toNavOptionText:hover {
+    transform: scale(1.1);
 }
 
 .toProfileText {
@@ -55,7 +78,11 @@
     cursor: pointer;
 }
 
-.header_account {
+.toProfileText:hover {
+    transform: scale(1.1);
+}
+
+.desktopNavContainer .header_account {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -63,31 +90,19 @@
 }
 
 /* SignUp Decorations */
-.signUpButton_active {
-    margin-right: 30px;
-    color: var(--light-blue);
-    text-decoration: none;
-    cursor: pointer
-}
-
-.signUpButton_active:hover {
-    transform: scale(1.05);
-}
-
-.signUpButton_desactive {
+.signUpButton{
     margin-right: 30px;
     color: var(--dark-blue);
-    text-decoration: none;
     cursor: pointer
 }
 
-.signUpButton_desactive:hover {
+.signUpButton:hover {
     color: var(--dark-blue);
     transform: scale(1.1);
 }
 
 /* LogIn Decorations */
-.loginButton_desactive {
+.loginButton {
     display: flex;
     flex-direction: row;
     color: var(--dark-blue);
@@ -95,11 +110,10 @@
     border: 2px solid var(--dark-blue);
     border-radius: 10px;
     padding-inline: 30px;
-    text-decoration: none;
     cursor: pointer
 }
 
-.loginButton_desactive:hover {
+.loginButton:hover {
     color: white;
     background-color: var(--dark-blue);
     transition: background-color 200ms linear;
@@ -107,32 +121,72 @@
 }
 
 
-.loginButton_desactive:hover .loginIcon{
+.loginButton:hover .loginIcon{
     stroke: white;
 }
 
 
-.loginButton_desactive .loginIcon {
+.loginButton .loginIcon {
     stroke: var(--dark-blue);
     stroke-width: 1px;
     padding-left: 5px;
 }
 
-.loginButton_active {
+.mobileNavContainer {
     display: flex;
     flex-direction: row;
-    color: white;
     align-items: center;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding-inline: 30px;
-    text-decoration: none;
-    background-color: var(--light-blue);
-    cursor: pointer
+    width: 100%;
 }
 
-.loginButton_active .loginIcon {
-    stroke: white;
-    stroke-width: 1px;
-    padding-left: 5px;
+.menuMainContainer {
+    position: relative;
+}
+
+.menuIcon {
+    color: var(--dark-blue);
+}
+
+.menuIcon:hover {
+    cursor: pointer;
+}
+
+.menuOptionsContainer {
+    display: none;
+}
+
+.menuMainContainer:hover .menuOptionsContainer {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    width: 200px;
+}
+
+.menuOptionsContainer a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.menuMainContainer a:hover {
+    transform: scale(1.1);
+}
+
+.mobileNavContainer .header_account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.mobileNavContainer .header_account .signUpButton {
+    margin: 0;
 }

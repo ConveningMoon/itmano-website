@@ -7,7 +7,6 @@
     color: var(--dark);
 }
 
-
 .serviceCard_imgOnRight {
     display: flex;
     flex-direction: row-reverse;
@@ -65,4 +64,36 @@
         opacity: 1;
     }
 }
-  
+
+@media (max-width: 860px) {
+    .serviceCard_imgOnLeft {
+        display: block;
+        padding: 0;
+    }
+
+    .serviceCard_imgOnRight {
+        display: block;
+        padding: 0;
+    }
+
+    .serviceCard_imgOnLeft .cardImg {
+        height: 180px;
+        float: left;
+        margin-right: 15px;
+    }
+
+    .serviceCard_imgOnRight .cardImg {
+        height: 180px;
+        float: right;
+        margin-right: 15px;
+    }
+
+    .serviceContent_imgOnLeft {
+        padding: 0;
+    }
+
+    .serviceContent_imgOnRight {
+        padding: 0;
+    }
+
+}

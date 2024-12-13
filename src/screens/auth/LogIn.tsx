@@ -7,7 +7,7 @@ import AccountCard from '../../components/AccountCard';
 
 const LogIn: React.FC = () => (
   <div className={styles.LogInContainer}>
-    <NavBar />
+    <NavBar isAuthenticating={true} />
     <AccountCard
         isRegister={false}
     />

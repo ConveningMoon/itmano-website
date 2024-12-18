@@ -1,0 +1,127 @@
+.contactUsCardContainer {
+    background: linear-gradient(to left bottom, white 80%, var(--light-blue) 20%);
+    width: 70%;
+    border-radius: 25px;
+}
+
+.contactUsCardContainer .contactUsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 15px 10px -10px rgba(6, 168, 191, 0.5);
+    width: 100%;
+    height: 80px;
+    border-radius: 25px;
+    background-color: var(--light-blue);
+}
+
+.contactUsCardContainer .contactUsHeader h1 {
+    color: white;
+}
+
+.contactUsCardContainer h2 {
+    margin-left: 20px;
+    margin-bottom: 0;
+    color: var(--light-blue);
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.contactUsCardContentContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.contactUsCardContentContainer img {
+    width: 30%;
+    height: auto;
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.contactUsCardContentContainer .mainContentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactUsCardContentContainer .mainContentContainer p{
+    font-size: 18px;
+    line-height: 30px;
+    margin-right: 20px;
+}
+
+.contactUsCardContentContainer .mainContentContainer button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: var(--neon-purple);
+    color: white;
+}
+
+.contactUsCardContentContainer .mainContentContainer button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+
+.contactUsCardContentContainer .mainContentContainer button::before,
+.contactUsCardContentContainer .mainContentContainer button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.contactUsCardContentContainer .mainContentContainer button::before {
+    content: "";
+    background: var(--light-blue);
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.contactUsCardContentContainer .mainContentContainer button:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+@media (max-width: 950px) {
+    .contactUsCardContainer {
+        background: none;
+        background-color: white;
+        width: 70%;
+        border-radius: 25px;
+    }
+    
+    .contactUsCardContentContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactUsCardContentContainer img {
+        margin-bottom: 0;
+    }
+
+    .contactUsCardContentContainer .mainContentContainer p{
+        margin-inline: 20px;
+    }
+
+    .contactUsCardContentContainer .mainContentContainer button {
+        margin-left: 25px;
+    }
+}

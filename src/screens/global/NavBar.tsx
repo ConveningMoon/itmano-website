@@ -22,18 +22,6 @@ interface NavBarProps {
   isAuthenticating?: boolean;
 }
 
-function ToursOptionHandler() {
-  alert("VR/AR Tours Handler!");
-}
-
-function AppOptionHandler() {
-  alert("App Development Handler!");
-}
-
-function WebOptionHandler() {
-  alert("Web Development Handler!");
-}
-
 const NavBar: React.FC<NavBarProps> = ({alreadyLogged = false, isAuthenticating = false}) => {
   const isMobile = useMediaQuery({ query: '(max-width: 1070px)' });
 
@@ -49,9 +37,15 @@ const NavBar: React.FC<NavBarProps> = ({alreadyLogged = false, isAuthenticating 
           </Link>
           {alreadyLogged && !isAuthenticating &&
             <div className={styles.header_navigator}>
-              <NavOption title="VR/AR Tours" imgSrc={toursLogo} onClick={ToursOptionHandler}/>
-              <NavOption title="App Development" imgSrc={appLogo} onClick={AppOptionHandler}/>
-              <NavOption title="Web Development" imgSrc={webLogo} onClick={WebOptionHandler}/>
+              <a href="#tours" style={{textDecoration: 'none'}}> 
+                <NavOption title="VR/AR Tours" imgSrc={toursLogo} />
+              </a>
+              <a href="#appDevelopment" style={{textDecoration: 'none'}}>
+                <NavOption title="App Development" imgSrc={appLogo} />
+              </a>
+              <a href="#webDevelopment" style={{textDecoration: 'none'}}>
+                <NavOption title="Web Development" imgSrc={webLogo} />
+              </a>
             </div> 
           }
           {!alreadyLogged && !isAuthenticating &&
@@ -111,9 +105,15 @@ const NavBar: React.FC<NavBarProps> = ({alreadyLogged = false, isAuthenticating 
                       paddingBottom: '20px'
                     }}
                   >
-                    <NavOption title="VR/AR Tours" imgSrc={toursLogo} onClick={ToursOptionHandler}/>
-                    <NavOption title="App Development" imgSrc={appLogo} onClick={AppOptionHandler}/>
-                    <NavOption title="Web Development" imgSrc={webLogo} onClick={WebOptionHandler}/>
+                    <a href="#tours" style={{textDecoration: 'none'}}> 
+                      <NavOption title="VR/AR Tours" imgSrc={toursLogo} />
+                    </a>
+                    <a href="#appDevelopment" style={{textDecoration: 'none'}}>
+                      <NavOption title="App Development" imgSrc={appLogo} />
+                    </a>
+                    <a href="#webDevelopment" style={{textDecoration: 'none'}}>
+                      <NavOption title="Web Development" imgSrc={webLogo} />
+                    </a>
                   </div>
                   <p className={styles.toProfileText}>My Profile</p> 
                 </div>

@@ -1,40 +1,67 @@
-.ProfileContentContainer {
+.profileImagesContainer {
     display: flex;
     flex-direction: column;
     margin: 0;
     position: relative;
 }
 
-.ProfileContentContainer .profileMediaContainer {
+.profileImagesContainer .profileMediaContainer {
     background-color: aqua;
 }
 
-.ProfileContentContainer .bannerImage {
+.profileImagesContainer .bannerImage {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-.ProfileContentContainer .profileImage {
+.profileImagesContainer .profileImage {
     position: absolute; 
-    left: calc(50vw - 152px);
+    left: calc(50vw - 127px); /*(width+border)/2*/
+    top: 50px;
     height: auto;
     border-radius: 50%;
 
     /* to calculate the left and right */
-    width: 300px;
+    width: 250px;
     border: 4px solid white;
 }
 
-.ProfileContentContainer .personalInfo {
+.personalProfileInfo {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     margin-inline: 25px;
     margin-top: 90px;
 }
 
-.ProfileContentContainer .personalInfo h1{
+.personalProfileInfo h1 {
     color: var(--dark);
+    margin-top: 0;
 }
 
-.ProfileContentContainer .personalInfo h2{
-   margin-top: 40px;
+.personalProfileInfo h2 {
+    color: var(--dark-blue);
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.profileContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileContentContainer .companyTitle, .profileContentContainer .companyDescription {
+    margin-left: 20px;
+    align-self: flex-start;
+}
+
+.profileContentContainer .companyDescription {
+    margin-block: 0;
+}
+
+.ServiceProfileMainContainer {
+    margin-top: 25px;
 }

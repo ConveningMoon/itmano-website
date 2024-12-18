@@ -5,11 +5,11 @@ interface NavProps {
     title: string;
     imgSrc: string;
     alt?: string;
-    onClick: () => void;
+    // onClick: () => void;
 }
 
-const NavOption: React.FC<NavProps> = ({ title, imgSrc, alt='thumbnail_alt', onClick}) => (
-    <div className={styles.navOption} onClick={onClick}>
+const NavOption: React.FC<NavProps> = ({ title, imgSrc, alt='thumbnail_alt'}) => (
+    <div className={styles.navOption}>
         <img src={imgSrc} alt={alt}/>
         <p>{title}</p>
     </div>
